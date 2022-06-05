@@ -67,5 +67,12 @@ public class Gambler {
         System.out.println("Total Win Days: " + WinDays + "total amount win days amount: " + Winning * WinDays);
         System.out.println("Total Loss Days: " + LossDays + "total amount loss day amount: " + lossing * LossDays);
 
+        if (+Winning * WinDays > lossing * LossDays) {
+            System.out.println("continue playing for next month");
+        } else {
+            System.out.println("stop playing for next month");
+        }
+
     }
 }
+
