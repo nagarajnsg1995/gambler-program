@@ -9,25 +9,28 @@ public class Gambler {
     static int gain = 0;
 
     public static void main(String[] args) {
+        int Stack_Upper = 150;
+        int Stack_Lower = 50;
         System.out.println("Welcome To Gambler Simulator");
+        while (Every_Day_Stack > Stack_Lower && Every_Day_Stack < Stack_Upper) {
+            double random = Math.floor(Math.random() * 10) % 2;
+            System.out.println(random);
+            if (random == 1) {
+                int win = 1;
+                Every_Day_Stack = Every_Day_Stack + win;
+                gain++;
 
-        double random = Math.floor(Math.random() * 10) % 2;
-        System.out.println(random);
-        if (random == 1) {
-            int win = 1;
-            Every_Day_Stack = Every_Day_Stack + win;
-            gain++;
+                System.out.println("wins: " + win + " gains: " + gain);
+                System.out.println("total winning : " + Every_Day_Stack);
+            } else {
+                int loss = 1;
+                Every_Day_Stack = Every_Day_Stack - loss;
+                gain--;
 
-            System.out.println("wins: " + win + " gains: " + gain);
-            System.out.println("total winning : " + Every_Day_Stack);
-        } else {
-            int loss = 1;
-            Every_Day_Stack = Every_Day_Stack - loss;
-            gain--;
+                System.out.println("loss : " + loss + "gains: " + gain);
+                System.out.println("total lossed : " + Every_Day_Stack);
 
-            System.out.println("loss : " + loss + "gains: " + gain);
-            System.out.println("total lossed : " + Every_Day_Stack);
-
+            }
         }
     }
 }
