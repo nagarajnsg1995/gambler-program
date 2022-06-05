@@ -9,8 +9,8 @@ public class Gambler {
     static int gain = 0;
     static int WinDays = 0;
     static int LossDays = 0;
-    static int lossing = 0;
-    static int Winning = 0;
+    static    int lossing = 0;
+    static int Winning =0;
 
     public static void main(String[] args) {
         int Stack_Upper = 150;
@@ -18,7 +18,7 @@ public class Gambler {
 
 
         System.out.println("Welcome To Gambler Simulator");
-        for (int day = 1; day <= 20; day++) {
+        for (int day = 1; day <= 30; day++) {
             Every_Day_Stack = 100;
             while (Every_Day_Stack > Stack_Lower && Every_Day_Stack < Stack_Upper) {
                 double random = Math.floor(Math.random() * 10) % 2;
@@ -58,6 +58,10 @@ public class Gambler {
 
         }
 
+        System.out.println("total win days" + WinDays);
+        System.out.println("total loss days" + LossDays);
+
+        System.out.println("Total Win Days: "+WinDays + "total amount win days amount: " +Winning * WinDays );
+        System.out.println("Total Loss Days: "+LossDays + "total amount loss day amount: " +lossing * LossDays );
     }
 }
-
